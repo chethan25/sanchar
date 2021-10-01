@@ -1,0 +1,21 @@
+{
+  "name": "sanchar",
+  "version": "1.0.0",
+  "description": "send files to another device using qr code",
+  "private": true,
+  "scripts": {
+    "build": "webpack",
+    "start": "webpack --watch --progress",
+    "visualize-bundle": "webpack --analyze"
+  },
+  "author": "chethan25",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^5.55.1",
+    "webpack-cli": "^4.8.0"
+  },
+  "dependencies": {
+    "firebase": "^9.1.1",
+    "jszip": "^3.7.1"
+  }
+}
