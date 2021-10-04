@@ -8,6 +8,8 @@ body {
   font-family: 'IBM Plex Sans', sans-serif;
   background-color: #faf6f6;
   height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Header */
@@ -63,7 +65,7 @@ body {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  height: 400px;
+  height: 50vh;
 }
 
 .upload-files-title {
@@ -94,7 +96,7 @@ body {
 
 .btn-icon {
   position: absolute;
-  top: 30%;
+  top: 35%;
   left: 5%;
 }
 
@@ -142,4 +144,25 @@ body {
 .dropbox-btn:hover,
 .url-btn:hover {
   border: 1px solid rgb(32, 163, 214);
+}
+
+/* Footer */
+.layout-footer {
+  background-color: #fff;
+  margin-top: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60px;
+  box-shadow: 0 -2px 3px rgba(0, 0, 0, 0.05);
+  border-top: 1px solid #eee;
+  font-size: 20px;
+}
+
+.layout-footer-text {
+  font-weight: 300;
+}
+
+.layout-footer a {
+  margin-left: 20px;
 }
