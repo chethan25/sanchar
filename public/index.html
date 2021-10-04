@@ -20,21 +20,26 @@
     <title>Sanchar</title>
   </head>
   <body>
-    <header class="layout-header">
+    <header class="layout-header" id="layout-header">
       <div class="logo-wrapper">
         <a class="logo" href="index.html">
           <img class="logo-img" src="./img/logo.png" alt="Sanchar logo" />
-          <h1 class="logo-text">sanchar</h1>
+          <h1 class="logo-text" id="logo-text">sanchar</h1>
         </a>
       </div>
-      <div class="theme-icon">
-        <img class="theme-img" src="./img/dark-theme.svg" alt="theme icon" />
+      <div class="dark-theme-btn">
+        <label class="switch">
+          <input type="checkbox" id="input-checkbox" />
+          <span class="slider round"></span>
+        </label>
       </div>
     </header>
 
     <section class="layout-upload-files">
       <div class="upload-files-title">
-        <h3 class="upload-files-title-text">Select files to send</h3>
+        <h3 class="upload-files-title-text" id="upload-files-title-text">
+          Select files to send
+        </h3>
       </div>
       <div class="btn-container">
         <div class="btn-icon" title="Add files">
@@ -60,7 +65,7 @@
         Scan the QR code to recieve the files
       </h3>
       <div class="layout-qr-code-container">
-        <div class="close-btn">
+        <div class="close-btn" id="close-btn">
           <i class="fas fa-times fa-2x"></i>
         </div>
         <div class="qr-code-container">
@@ -72,9 +77,9 @@
         </div>
       </div>
     </section>
-    <footer class="layout-footer">
+    <footer class="layout-footer" id="layout-footer">
       <h4 class="layout-footer-text">&copy 2021</h4>
-      <a href="https://github.com/chethan25" target="_blank">
+      <a href="https://github.com/chethan25" target="_blank" id="github-link">
         <i class="fab fa-github"></i
       ></a>
     </footer>

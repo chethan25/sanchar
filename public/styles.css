@@ -12,6 +12,10 @@ body {
   flex-direction: column;
 }
 
+.body-dark-theme {
+  background-color: #151e34ff;
+}
+
 /* Header */
 .layout-header {
   display: flex;
@@ -21,6 +25,11 @@ body {
   background-color: #fff;
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.05);
   border-bottom: 1px solid #eee;
+}
+
+.layout-header-dark-theme {
+  background-color: #080c24ff;
+  border-bottom: 1px solid rgb(53, 57, 59);
 }
 
 .logo-wrapper {
@@ -37,7 +46,12 @@ body {
 .logo-text {
   text-transform: uppercase;
   color: #000;
+
   font-size: 25px;
+}
+
+.logo-text-dark-theme {
+  color: #ccc;
 }
 
 .logo-img {
@@ -50,13 +64,71 @@ body {
   letter-spacing: 3px;
 }
 
-.theme-icon {
-  margin-right: 55px;
+/* Dark theme toggle btn */
+.dark-theme-btn {
+  margin-right: 30px;
+}
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
 }
 
-.theme-img {
-  height: 30px;
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
   cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: '';
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: rgb(0, 0, 0);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #17598f;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #17598f;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
 }
 
 /* File Upload Section */
@@ -79,6 +151,10 @@ body {
   color: #505050;
 }
 
+.upload-files-title-text-dark-theme {
+  color: #ccc;
+}
+
 .btn-container {
   display: flex;
   align-items: center;
@@ -90,9 +166,17 @@ body {
   position: relative;
 }
 
+.btn-container-dark-theme {
+  background-color: #17598f;
+}
+
 .btn-container:hover {
   background-color: rgb(109, 181, 209);
   cursor: pointer;
+}
+
+.btn-container-dark-theme:hover {
+  background-color: #276496;
 }
 
 .btn-icon {
@@ -108,7 +192,7 @@ body {
 .btn-label {
   font-size: 20px;
   font-weight: 700;
-  color: #fff;
+  color: #faf6f6;
   width: 550px;
   height: 70px;
   text-align: center;
@@ -141,6 +225,14 @@ body {
   cursor: pointer;
 }
 
+.drive-btn-dark-theme,
+.dropbox-btn-dark-theme,
+.url-btn-dark-theme {
+  background-color: #212224ff;
+  color: #ccc;
+  border: 2px solid #ccc;
+}
+
 .drive-btn:hover,
 .dropbox-btn:hover,
 .url-btn:hover {
@@ -160,12 +252,22 @@ body {
   font-size: 20px;
 }
 
+.layout-footer-dark-theme {
+  background-color: #080c24ff;
+  color: #fff;
+  border-top: 1px solid rgb(53, 57, 59);
+}
+
 .layout-footer-text {
   font-weight: 300;
 }
 
 .layout-footer a {
   margin-left: 20px;
+}
+
+.github-link-dark-theme {
+  color: #fff;
 }
 
 /* QR code section */
@@ -185,6 +287,10 @@ body {
   color: #505050;
 }
 
+.layout-qr-code-title-dark-theme {
+  color: #ccc;
+}
+
 .layout-qr-code-container {
   position: relative;
   margin-top: 40px;
@@ -193,11 +299,20 @@ body {
   border-bottom: 1px solid black;
 }
 
+.layout-qr-code-container-dark-theme {
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+
 .close-btn {
   position: absolute;
   right: 1%;
   top: 1%;
   cursor: pointer;
+}
+
+.close-btn-dark-theme {
+  color: #ccc;
 }
 
 .layout-qr-code-container .qr-code {
