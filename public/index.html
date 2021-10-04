@@ -7,10 +7,16 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Raleway&display=swap"
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
     <title>Sanchar</title>
   </head>
   <body>
@@ -25,6 +31,30 @@
         <img class="theme-img" src="./img/dark-theme.svg" alt="theme icon" />
       </div>
     </header>
+
+    <section class="layout-upload-files">
+      <div class="upload-files-title">
+        <h3 class="upload-files-title-text">Select the files to send</h3>
+      </div>
+      <div class="btn-container">
+        <div class="btn-icon" title="Add files">
+          <i class="fa fa-plus"></i>
+        </div>
+        <label for="file-btn" class="btn-label">Upload files</label>
+        <input type="file" id="file-btn" value="upload" multiple />
+      </div>
+      <div class="external-repos">
+        <div class="drive-btn" title="Select file from Google Drive">
+          <i class="fab fa-google-drive fa-2x"></i>
+        </div>
+        <div class="dropbox-btn" title="Select file from Dropbox">
+          <i class="fab fa-dropbox fa-2x"></i>
+        </div>
+        <div class="url-btn" title="Load file from URL">
+          <i class="fas fa-link fa-2x"></i>
+        </div>
+      </div>
+    </section>
     <script src="./scripts/main.js"></script>
   </body>
 </html>
