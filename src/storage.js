@@ -34,3 +34,12 @@ export async function uploadFile(file, uniqueId) {
     );
   }
 }
+
+export async function deleteFile(file, uniqueId) {
+  try {
+    const storageRef = ref(storage, `${uniqueId}/${file.name}`);
+    const res = await deleteObject(storageRef);
+  } catch (error) {
+    console.log(error);
+  }
+}
