@@ -9,6 +9,7 @@ const fileButton = document.getElementById('file-btn');
 const uploadFilesLayout = document.querySelector('.layout-upload-files');
 const qrCodeLayout = document.querySelector('.layout-qr-code');
 const qrcodeContainer = document.getElementById('qr-code-container');
+const closeBtn = document.getElementById('close-btn');
 
 async function handleFiles() {
   let uniqueId = Date.now() + Math.floor(Math.random() * 25);
@@ -22,12 +23,29 @@ async function handleFiles() {
     qrCodeLayout.style.display = 'flex';
 
     generateQrcode(url);
+
+    closeBtn.onclick = function () {
+      qrCodeLayout.style.display = 'none';
+      uploadFilesLayout.style.display = 'flex';
+      deleteFile(file, uniqueId);
+    };
   } else {
     const zip = await zipFiles(this.files);
     const url = await uploadFile(zip, uniqueId);
 
+    uploadFilesLayout.style.display = 'none';
+    qrCodeLayout.style.display = 'flex';
+
     generateQrcode(url);
+
+    closeBtn.onclick = function () {
+      qrCodeLayout.style.display = 'none';
+      uploadFilesLayout.style.display = 'flex';
+      deleteFile(zip, uniqueId);
+    };
   }
+
+  fileButton.value = '';
 }
 
 async function zipFiles(files) {
@@ -52,7 +70,7 @@ function generateQrcode(url) {
   let qr = qrcode(typeNumber, errorCorrectionLevel);
   qr.addData(url);
   qr.make();
-  qrcodeContainer.innerHTML = qr.createImgTag(6);
+  qrcodeContainer.innerHTML = qr.createImgTag(5);
 }
 
 darkThemeToggleBtn.addEventListener('change', toggleTheme);
