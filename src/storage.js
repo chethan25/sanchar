@@ -7,7 +7,6 @@ import {
 } from 'firebase/storage';
 import { getFirebaseConfig } from './firebase-config';
 import { initializeApp } from 'firebase/app';
-import to from 'await-to-js';
 
 const firebaseAppConfig = getFirebaseConfig();
 
