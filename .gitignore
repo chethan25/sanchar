@@ -2,7 +2,7 @@ node_modules
 .firebaserc
 firebase.json
 public/scripts
-firebase-messaging-sw.js
 src/firebase-config.js
+firebase-messaging-sw.js
 manifest.json
 .firebase
