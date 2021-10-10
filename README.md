@@ -5,8 +5,8 @@ Sanchar is a single page web app which can be used to share any type of files be
 ## How it works
 
 * Upload the file from your file system. The file will be stored in firebase cloud storage.
-* If multiple files are selected the files will be compressed into a zip file.
-* A QR code is generated for each file which can be scanned to recieve the file.
+* If multiple files are selected the files will be compressed into a zip file before uploading.
+* A QR code is generated for each file which can be scanned from a different device to recieve the file.
 * The uploaded file will be immediately deleted once the QR code is closed.
 
 ## Live Demo
