@@ -5,3 +5,4 @@ public/scripts
 .firebase
 firebase-messaging-sw.js
 manifest.json
+firebase-config.js
