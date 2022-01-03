@@ -9,7 +9,7 @@ Sanchar is a single page web app which can be used to share any type of files be
 * A QR code is generated for each file which can be scanned from a different device to receive the file.
 * The uploaded file will be immediately deleted once the QR code is closed.
 
-## Live Demo
+## Website Link
 https://sanchar-faf9f.web.app/
 
 ## Future work
